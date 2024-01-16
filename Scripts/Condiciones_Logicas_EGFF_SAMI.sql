@@ -28,7 +28,7 @@
 /*OPCIÓN I* PARA [SAMI_EGFF_13].[ID Departamento]*/
 =Si([SAMI_EGFF_15].[ID Departamento]=11) Entonces "DEPARTAMENTOS:" + "13"
 
-/*OPCIÓN II* [SAMI_EGFF_N].[ID Departamento], SIENDO N EL*/
+/*OPCIÓN II* [SAMI_EGFF_N].[ID Departamento], SIENDO N EL # DEL EJERCICIO*/
 ="DEPARTAMENTOS: " + (Cuenta([SAMI_EGFF_15].[ID Departamento];ValoresÚnicos)-1)
 
 /*CONDICIÓN SI ASIGNADO ES IGUAL A CERO*/
