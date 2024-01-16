@@ -1,0 +1,1 @@
+Elaboración de Script SQL para desarrollo de Tablero de Control (Dashbard) correspondiente a la Ejecución del Gasto por Fuente de Financiamiento dentro del Sistema de Administración Municipal Integrado (SAMI) a partir del Universo [unx] SAMI - MODELOS VARIOS  en WebI de SAP HANA.
