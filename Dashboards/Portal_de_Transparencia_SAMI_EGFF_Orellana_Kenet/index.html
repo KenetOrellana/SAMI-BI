@@ -1,0 +1,76 @@
+<!-- Elaborado por Kenet Orellana para el Centro de Servicios a Usuarios (CSU) de la Secretaría de Finanzas (SEFIN) -->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SAMI | Ejecución del Gasto por Fuente de Financiamiento</title>
+    <script language="javascript" src="reports.js">
+    </script>
+    <style>
+        html, body {
+            margin:0;
+            height: 100%;
+        }
+		
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 7;
+		}
+
+		li {
+			display:inline-block;
+			margin:2px 5px 2px 0;
+			padding: 5px 5px 5px 5px;
+			background-color:#8AE4F0;
+			border-radius: 3px;    
+		}
+
+		a {
+			text-decoration: none;
+			font-family: Arial,Helvetica,sans-serif;
+			text-shadow: 0 0 0.125rem #000000;
+		}
+
+		a:link, a:visited {
+			color: white;
+		}
+		a:hover {
+			color: lightgrey;
+		}
+	
+    </style>
+</head>
+<body>
+    <div id='content' style="padding-top: 2px; background-color:#4cc7d7"></div>
+    <div style="padding-top: 0px;">
+        <iframe id="theFrame" src="about:blank" width="100%" height="100%"></iframe>
+    </div>
+	<script>
+		var content = document.getElementById('content');
+		content.innerHTML = '';
+		var reportAll='';
+		var firstKey="";
+		
+		for (var key in order)
+		{
+			if (firstKey=="")
+				firstKey=key
+				
+			var reportId=order[key];
+			
+			var reportLink = "<li><a href='#" + reportId + "' ";
+			
+			reportLink += "onclick=document.getElementById('theFrame').src='" + reportId + "/report.html';>"
+			
+			reportLink += reportIds[reportId]['name'];
+			reportLink += '</a>';
+			reportLink += '</li>';
+			reportAll += reportLink;
+		
+		}
+		
+		content.innerHTML += '<ul>' + reportAll + '</ul>' ;
+		document.getElementById('theFrame').src = order[firstKey] + "/report.html"
+	</script>
+</body>
+</html>
